@@ -1,0 +1,18 @@
+== Allowing Remote Access to OWF
+
+To run OWF remotely, and NOT from a localhost environment, execute the following steps:
+
+. Identify a server host name.
+. Generate a server certificate.
+. Install the server certificate.
+. Modify configuration files.
+
+=== Identifying a Server Name
+
+The server host name can be chosen arbitrarily and entered into the users' HOST files, or it can be obtained from DNS. This Quick Start Guide will refer to the selected server host name as `servername` and to OWF as `https://servername:port/`.
+
+=== Modify the Client's Environment Properties
+
+In order to access OWF from remote computers, the proper setting must be set for the frontend to communicate with the backend.
+
+The recommended approach is to set the environment variable for SERVER_URL via the .env file(explanation of this is provided in the Configuration Guide). The default is set to SERVER_URL=http://localhost:8000, but this should reflect the servername that is desired for the remote machine.

@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+  ozone:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "ozone"
+    entrypoint: /code/start.sh
+    environment:
+      OWF_DB_HOST: "postgresdb"
+    ports:
+      - "8000:8000"
+    networks:
+      - owf
+
+  ozone_widgets:
+    image: "ozone/widgets"
+    build:
+      context: "./ozone-example-widgets"
+    container_name: "ozone_widgets"
+    ports:
+      - "4000:4000"
+    networks:
+      - owf
+
+  postgresdb:
+    image: postgres
+    container_name: "ozone_postgres"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - owf
+
+  ozone_pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@goss.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5555:80"
+    networks:
+      - owf
+
+networks:
+  owf:
+    driver: bridge

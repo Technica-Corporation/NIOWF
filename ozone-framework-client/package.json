@@ -1,0 +1,17 @@
+{
+  "name": "@ozone/platform-client",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "copy-required-public": "lerna run copy-required-public",
+    "start": "npm run --prefix packages/application start",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "lerna": "3.13.1",
+    "tslint": "5.14.0",
+    "typescript": "3.4.1"
+  }
+}

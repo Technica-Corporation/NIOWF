@@ -1,0 +1,46 @@
+:local .formError {
+  color: red;
+  font-size: 80%;
+}
+
+:local .formGroup {
+  margin-bottom: .5em;
+
+  label {
+    margin: 0;
+  }
+}
+
+:local .submitButton {
+}
+
+:local .cancelButton {
+}
+
+:local(.validationError) {
+  visibility: hidden;
+  min-height: 18px;
+  font-size: 80%;
+  color: #f00;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+:local(.labelValidationError) {
+  visibility: hidden;
+  font-size: 80%;
+  color: #f00;
+
+  padding-left: .2rem;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+
+:local .errorCallout {
+  margin-bottom: 1em;
+}

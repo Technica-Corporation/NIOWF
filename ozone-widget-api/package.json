@@ -1,0 +1,26 @@
+{
+  "name": "ozone-widget-api",
+  "version": "7.17.2",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc && gulp build",
+    "test": "tsc && gulp build && jest",
+    "test:serve": "tsc && gulp build && node test-server/serve.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
+    "gulp-concat": "2.6.1",
+    "gulp-gzip": "1.4.0",
+    "gulp-rename": "1.2.2",
+    "gulp-terser": "1.1.7",
+    "jest": "23.6.0",
+    "koa": "2.5.3",
+    "koa-mount": "4.0.0",
+    "koa-static": "5.0.0",
+    "merge2": "1.2.0",
+    "typescript": "3.4.3"
+  }
+}

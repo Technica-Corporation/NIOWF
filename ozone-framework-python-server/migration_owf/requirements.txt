@@ -1,0 +1,8 @@
+pytz
+Cython
+cx_Oracle
+pymysql
+pymssql==2.1.4
+django-mssql-backend
+mysqlclient==1.4.6
+cryptography

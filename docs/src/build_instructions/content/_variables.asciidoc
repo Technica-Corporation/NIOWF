@@ -1,0 +1,4 @@
+:version-jdk: 1.8
+:version-node: 10.16.0
+:version-npm: 6.9.0
+:version-python: 3.7.4

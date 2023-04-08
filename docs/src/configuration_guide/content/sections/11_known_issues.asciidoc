@@ -1,0 +1,10 @@
+[#known_issues]
+= Known Issues
+
+== Backend
+
+* Docker script for development sometimes fails when linking the postgres database to the ozone application.
+
+== Frontend
+
+* N/A

@@ -1,0 +1,22 @@
+@import "../../common";
+
+:local .dialog {
+  width: 50% !important;
+  max-width: none;
+  padding: 30;
+}
+
+.bp3-input-group {
+    margin: 4px;
+    width: 99%;
+}
+
+.growing-left {
+    width:auto;
+    overflow:hidden;
+}
+.button-fixed-right {
+    min-width:40px;
+    width:5%;
+    float:right;
+}

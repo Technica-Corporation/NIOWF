@@ -1,0 +1,50 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Ozone Platform</title>
+    <script type="text/javascript">
+        window.env = {
+            login: {
+                isEnabled: {{ enable_login }}
+            },
+            logout: {
+                isEnabled: {{ enable_logout }}
+            },
+            server: {
+                backendUrl: "{{ server_url }}",
+                frontendUrl: "{{ server_url }}",
+                staticAssetPath: ""
+            },
+            consentNotice: {
+                isEnabled: {{ enable_consent }},
+                title: "{{ consent_title }}",
+                message: "{{ consent_message }}",
+                details: {
+                    isEnabled: {{ enable_user_agreement }}
+                }
+            },
+            userAgreement: {
+                title: "{{ user_agreement_title}}",
+                message: "{{ user_agreement_message}}"
+            }
+        }
+    </script>
+    {% render_bundle 'blueprint' 'css' 'DEFAULT' %}
+    {% render_bundle 'vendors' 'css' 'DEFAULT' %}
+    {% render_bundle 'main' 'css' 'DEFAULT' %}
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    {% render_bundle 'polyfill' 'js' 'DEFAULT' %}
+    {% render_bundle 'blueprint' 'js' 'DEFAULT' %}
+    {% render_bundle 'mosaic' 'js' 'DEFAULT' %}
+    {% render_bundle 'vendors' 'js' 'DEFAULT' %}
+    {% render_bundle 'main' 'js' 'DEFAULT' %}
+</body>
+</html>

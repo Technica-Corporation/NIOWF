@@ -1,0 +1,29 @@
+:local .dataSection {
+
+    > header {
+        font-weight: bold;
+        font-size: 1.2em;
+        border-bottom: 1px solid #000;
+    }
+}
+
+:local .dataGrid {
+    padding: .65em 0 1em 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-template-columns: auto 1fr;
+    grid-auto-flow: row;
+
+    justify-items: start;
+
+    >div> label {
+        margin: 0.25em 1em 0.25em 0;
+        font-weight: bold;
+    }
+
+    >div> span {
+        margin: 0.25em 1em 0.25em 1em;
+    }
+}

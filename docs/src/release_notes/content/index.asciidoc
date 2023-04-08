@@ -1,0 +1,35 @@
+= Ozone Release Notes
+// Metadata:
+:doctype: book
+:author: DOD GOSS
+:revnumber: 8.0.0.1-RC1
+:revdate: 2020-3-29
+// Settings:
+:reproducible:
+:experimental:
+:toc: left
+:toclevels: 1
+:chapter-label:
+:xrefstyle: full
+:icons: font
+:icon-set: fas
+:imagesdir: images/
+
+
+== Publication & Revision History
+
+include::revision_history.asciidoc[]
+
+:leveloffset: +1'
+
+include::v8.0.0.1/8.0.0.1.asciidoc[]
+
+:leveloffset: +1'
+
+include::v8.0.0.0/8.0.0.0.asciidoc[]
+
+:leveloffset: +1
+
+include::v7.17.2/7-17-2.asciidoc[]
+
+:leveloffset: +1
