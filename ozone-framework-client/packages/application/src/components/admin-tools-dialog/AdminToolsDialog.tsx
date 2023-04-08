@@ -21,8 +21,6 @@ export const AdminToolsDialog: React.FC<{}> = () => {
 
     const userDashboards = useBehavior(dashboardStore.userDashboards);
     const adminWidgets = useAdminWidgets(userDashboards);
-
-    console.log("testing-FE", { userDashboards, adminWidgets });
     return (
         <div>
             <Dialog

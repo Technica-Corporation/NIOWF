@@ -1,4 +1,5 @@
 /node_modules/
+/build/
 
 /.idea/
 /*.iml
@@ -23,5 +24,5 @@ dist
 pep8-results.txt
 ozone-framework-python-server/migration_owf/migration_result/*_owf*
 ozone-framework-python-server/migration_owf/migration_result/oracle_*
-
+ozone-framework-python-server/venv/
 

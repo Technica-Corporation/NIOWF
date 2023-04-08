@@ -17,8 +17,6 @@ const _UserMenu: React.FC<UserMenuProps> = ({ user }) => {
     const { isEnabled: isLogoutEnabled } = useMemo(() => env().logout, []);
 
     const isAdmin = user && user.isAdmin;
-
-    console.log("testing-FE", { user, mainStore });
     return (
         <Menu data-element-id="user-menu" className={classNames(styles.userMenu, Classes.ELEVATION_1)}>
             <Menu.Item className={styles.menuItem} text="Profile" onClick={mainStore.showUserProfileDialog} />
