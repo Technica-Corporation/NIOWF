@@ -34,6 +34,7 @@ export class UsersDialog extends React.Component<Props, State> {
     }
 
     render() {
+        console.log("testing-FE", "users", { selected: this.state.selectedUsers });
         return (
             <TableSelectionDialog
                 title="Grant User(s) permissions to access Widget"

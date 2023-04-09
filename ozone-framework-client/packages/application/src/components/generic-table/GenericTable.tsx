@@ -109,11 +109,16 @@ export class GenericTable<T> extends React.Component<Props<T>, State<T>> {
                                 ref={this.tableRef}
                                 columns={this.formatColumnNames(this.props.getColumns())}
                                 data={this.getItems()}
-                                rowClick={(ev: any, row: any) => this.selectItem(ev, row)}
+                                // rowClick={(ev: any, row: any) => this.selectItem(ev, row)}
                                 rowFormatter={(ev: any, row: any) => this.rowFormatItem(ev, row)}
-                                options={this.buildTableProps(this.state.dimensions.height)}
+                                // options={this.buildTableProps(this.state.dimensions.height)}
                                 // data-custom-attr="test-custom-attribute"
                                 className={classNames("table-sm table-striped table-borderless", mainStore.getTheme())}
+                                events={{
+                                    rowClick: (ev: any, row: any) => {
+                                        this.selectItem(ev, row);
+                                    }
+                                }}
                             />
                         </div>
                     </div>
@@ -278,7 +283,10 @@ export class GenericTable<T> extends React.Component<Props<T>, State<T>> {
     private selectItem(e: any, item: any): void {
         const newItem = item.getData();
 
+        console.log("rowClicked");
+
         if (!this.rowsAreClickable()) {
+            console.log("no clickable function");
             return;
         }
 

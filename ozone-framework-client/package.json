@@ -13,5 +13,10 @@
     "lerna": "3.13.1",
     "tslint": "5.14.0",
     "typescript": "3.4.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-tabulator": "^0.9.1"
   }
 }

@@ -33,7 +33,6 @@ export const HomeScreen: React.FC<{}> = () => {
         dashboardStore.fetchUserDashboards();
     }, []);
 
-    console.log("adnan_testing");
     return (
         <div className={styles.homeScreen} data-test-id="home-screen">
             <NavigationBar className="bp3-dark" />

@@ -105,6 +105,7 @@ export abstract class TableSelectionDialog<T> extends React.Component<
     }
 
     setSelected = (newItems: T[]): void => {
+        console.log("selction click");
         this.setState({
             selected: newItems
         });
