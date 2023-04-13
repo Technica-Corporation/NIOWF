@@ -10,9 +10,9 @@ export interface ClassificationConfig {
 export const DISABLED: ClassificationConfig = {
     text: "Disabled",
     backgroundColor: "#000",
-    foregroundColor: "#fff",
-    disableTopBanner: true,
-    disableBottomBanner: true
+        foregroundColor: "#fff",
+        disableTopBanner: true,
+        disableBottomBanner: true
 };
 
 export const DYNAMIC: ClassificationConfig = {
@@ -30,7 +30,9 @@ export const UNCLASSIFIED: ClassificationConfig = {
 export const UNCLASSIFIED_FOUO: ClassificationConfig = {
     text: "UNCLASSIFIED//FOR OFFICIAL USE ONLY",
     backgroundColor: "#090",
-    foregroundColor: "#fff"
+    foregroundColor: "#fff",
+    disableTopBanner: true,
+    disableBottomBanner: true
 };
 
 export const CONFIDENTIAL: ClassificationConfig = {

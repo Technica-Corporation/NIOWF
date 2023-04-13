@@ -16,6 +16,7 @@ export const WidgetTile: React.FC<WidgetTileProps> = (props) => {
     return (
         <div className={styles.tile} data-element-id={title} onClick={onClick}>
             <img className={styles.tileIcon} src={assetUrl(iconUrl)} />
+
             <span className={styles.tileTitle}>{title}</span>
         </div>
     );

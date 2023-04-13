@@ -28,6 +28,7 @@ const _InternalWidgetTile: React.FC<Props> = (props) =>
     props.connectDragSource(
         <div draggable={true} className={styles.subtile} onClick={props.onClick}>
             <img className={styles.tileIcon} src={props.iconUrl} />
+
             <span className={styles.tileTitle}>{props.title}</span>
         </div>
     );

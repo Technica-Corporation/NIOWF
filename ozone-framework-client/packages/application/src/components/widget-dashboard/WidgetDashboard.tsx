@@ -42,7 +42,9 @@ export const WidgetDashboard: React.FC<PropsBase> = (props) => {
     }, []);
 
     if (isLoading) {
-        return <Spinner className={styles.loadingSpinner} />;
+        return  <div className="bp3-spinner widget-dashboard_loadingSpinner__YMcse"> <img style={{width:'250px',height:'auto'}} src="/static/images/logo.png" /></div>
+
+        // return <Spinner className={styles.loadingSpinner} />;
     }
 
     document.title = "Ozone - " + dashboard.name;

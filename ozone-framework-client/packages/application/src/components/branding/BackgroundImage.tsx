@@ -12,6 +12,7 @@ export const BackgroundImage: React.FC<BackgroundImageProps> = (props) => {
     return (
         <div className={styles.fullcenter} data-element-id="custom-background-image">
             <img src={imgUrl} />
+
         </div>
     );
 };

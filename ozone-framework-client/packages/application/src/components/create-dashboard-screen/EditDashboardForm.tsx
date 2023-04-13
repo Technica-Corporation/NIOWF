@@ -57,6 +57,7 @@ export const EditDashboardForm: React.FC<EditDashboardFormProps> = ({ onSubmit, 
                         {/* <div className={styles.formIcon}>
                             <img width="60px" src={assetUrl(formik.values.iconImageUrl)} />
                         </div> */}
+
                         <div className={styles.formField}>
                             <TextField name="name" label="Title" labelInfo="(required)" />
                             {/* <TextField name="iconImageUrl" label="Icon Url" /> */}

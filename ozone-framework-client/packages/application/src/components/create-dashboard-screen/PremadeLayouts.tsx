@@ -28,6 +28,7 @@ const _PremadeLayouts: React.FC<PremadeLayoutsProps & FieldProps<any>> = (props)
                         value={layout.name}
                     />
                     <img className={styles.layoutIcon} src={assetUrl(layout.iconUrl)} />
+
                 </label>
             ))}
         </div>

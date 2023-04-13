@@ -45,6 +45,7 @@ export const StoreSelectionComponent: React.FC<StoreSelectionComponentProps> = (
                         {store.title}
                         <div style={{ marginTop: "10px" }}>
                             <img src={store.images.smallUrl} alt="Store Icon" width={100} height={100} />
+
                         </div>
                     </Button>
                 </span>

@@ -46,6 +46,7 @@ export const StackPropertiesPanel: React.FC<StackEditProps> = ({ saveStack, stac
                     <div className={styles.formBody}>
                         {" "}
                         <div className={styles.formIcon}>
+
                             <img width="60px" src={assetUrl(formik.values.imageUrl)} />
                         </div>
                         <TextField name="name" label="Name" labelInfo="(required)" />

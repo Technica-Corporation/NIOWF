@@ -71,6 +71,7 @@ export const CreateStackForm: React.FC<CreateStackFormProps> = ({ onSubmit }) =>
                     <div className={styles.form}>
                         <div className={styles.formIcon}>
                             <img width="60px" src={assetUrl(formik.values.imageUrl)} />
+
                         </div>
                         <div className={styles.formField}>
                             <TextField name="name" label="Title" labelInfo="(required)" />
