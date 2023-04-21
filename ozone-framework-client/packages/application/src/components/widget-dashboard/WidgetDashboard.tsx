@@ -42,7 +42,7 @@ export const WidgetDashboard: React.FC<PropsBase> = (props) => {
     }, []);
 
     if (isLoading) {
-        return  <div className="bp3-spinner widget-dashboard_loadingSpinner__YMcse"> <img style={{width:'250px',height:'auto'}} src="/static/images/logo.png" /></div>
+        return  <div className="bp3-spinner widget-dashboard_loadingSpinner__YMcse"> <img className={styles.logo} src="/images/logo.png" /></div>
 
         // return <Spinner className={styles.loadingSpinner} />;
     }

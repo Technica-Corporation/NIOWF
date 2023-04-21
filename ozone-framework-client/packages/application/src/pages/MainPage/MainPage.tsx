@@ -64,10 +64,10 @@ export const MainPage: React.FC<{}> = () => {
             )}
             {(isLoginEnabled || consentAcknowledged) && (
                 <ClassificationWrapper>
-                    {authStatus === AuthStatus.PENDING && <div className="bp3-spinner MainPage_loadingSpinner__VuvI1"> <img style={{width:'250px',height:'auto'}} src="/static/images/logo.png" /></div> }
+                    {authStatus === AuthStatus.PENDING && <div className="bp3-spinner MainPage_loadingSpinner__VuvI1"> <img className={styles.logo} src="/images/logo.png" /></div> }
                     {authStatus === AuthStatus.LOGGED_IN && <HomeScreen />}
                 </ClassificationWrapper>
             )}
         </DragDropContextProvider>
-    );
+    );  
 };

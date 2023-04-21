@@ -43,7 +43,7 @@ const _NavigationBar: React.FC<PropsBase> = ({ className }) => {
             <NavbarGroup className={styles.group} align={Alignment.CENTER}>
                 
                 <NavbarHeading>
-                <img style={{width:'250px',height:'auto'}} src="/static/images/logo.png" />
+                <img className={styles.logo} src="/images/logo.png" />
 
                 </NavbarHeading>
             </NavbarGroup>

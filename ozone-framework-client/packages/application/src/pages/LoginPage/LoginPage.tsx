@@ -13,10 +13,12 @@ export interface LoginPageProps {
     hideLogin: boolean;
     onConsentAcknowledged: () => void;
 }
+
 enum LoginState {
     Loading,
     Consent,
     UserAgreement,
+    DisplayHello,
     Login,
     Redirect
 }
@@ -46,19 +48,28 @@ export const LoginPage: React.FC<LoginPageProps> = (props) => {
                 if (!props.hideLogin) redirectToDesktop();
                 if (!isConsentEnabled) props.onConsentAcknowledged();
             })
-            .catch(() => setState(isConsentEnabled ? LoginState.Consent : LoginState.Login));
+            .catch(() => setState(isConsentEnabled ? LoginState.DisplayHello : LoginState.Login));
     }, []);
+
+    useEffect(() => {
+        let timeout: NodeJS.Timeout;
+        if (state === LoginState.DisplayHello) {
+            timeout = setTimeout(() => setState(LoginState.Login), 3000);
+        }
+        return () => clearTimeout(timeout);
+    }, [state]);
+
 
     return (
         <div data-test-id="login-page" className={styles.root}>
             {state === LoginState.Loading && <Spinner className={styles.loadingSpinner} />}
 
-            <ConsentNotice
+            {/* <ConsentNotice
                 opts={consentOpts}
                 isOpen={state === LoginState.Consent}
                 showUserAgreement={() => setState(LoginState.UserAgreement)}
                 onAccept={() => {
-                    setState(LoginState.Login);
+                    setState(LoginState.DisplayHello);
                     props.onConsentAcknowledged();
                 }}
             />
@@ -67,7 +78,16 @@ export const LoginPage: React.FC<LoginPageProps> = (props) => {
                 opts={agreementsOpts}
                 isOpen={state === LoginState.UserAgreement}
                 onClose={() => setState(LoginState.Consent)}
-            />
+            /> */}
+
+            {state === LoginState.DisplayHello && (
+                // <Spinner className={styles.loadingSpinner} />
+                <div style={{ display: "flex", justifyContent: "center",height:'100%' }}>
+                         <img className={styles.logomain} src="/images/logomain.png" />
+                    {/* <div className={styles.loadingSpinner} >{randomHelloMessage}</div> */}
+                </div>
+                
+            )}
 
             <LoginDialog isOpen={state === LoginState.Login} onSuccess={redirectToDesktop} />
 
