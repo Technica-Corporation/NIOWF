@@ -6,6 +6,7 @@ import { Shortcuts } from "../../../shared/hotkeys";
 import { mainStore } from "../../../stores/MainStore";
 
 import { NavbarTooltip } from "./NavbarTooltip";
+import { BsFillMoonFill } from "react-icons/bs";
 
 const _ThemeButton: React.FC = () => {
     useHotkey({ combo: Shortcuts.toggleTheme, onKeyDown: mainStore.toggleTheme });
@@ -16,7 +17,9 @@ const _ThemeButton: React.FC = () => {
             shortcut={Shortcuts.toggleTheme}
             description="Toggle between light and dark themes."
         >
-            <Button minimal icon="moon" onClick={mainStore.toggleTheme} data-element-id="theme-button" />
+            <Button minimal onClick={mainStore.toggleTheme} data-element-id="theme-button">
+                <BsFillMoonFill/>
+            </Button>
         </NavbarTooltip>
     );
 };

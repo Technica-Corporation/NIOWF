@@ -444,7 +444,7 @@ $drop-target-size-active: 25%;
 }
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-zero-state {
-    background: #30404d;
+    background: #ffffff;
     box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.4), 0 0 0 rgba(16, 22, 26, 0), 0 0 0 rgba(16, 22, 26, 0);
 }
 
@@ -460,7 +460,7 @@ $drop-target-size-active: 25%;
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-toolbar,
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-additional-actions-bar {
-    background: #30404d;
+    background: #ffffff;
     box-shadow: 0 1px 1px rgba(16, 22, 26, 0.4);
 }
 
@@ -471,7 +471,7 @@ $drop-target-size-active: 25%;
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window .mosaic-window-toolbar.draggable:hover,
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-preview .mosaic-window-toolbar.draggable:hover {
-    background: linear-gradient(to bottom, #394b59, #30404d);
+    background: linear-gradient(to bottom, #394b59, #ffffff);
 }
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window .mosaic-window-toolbar.draggable:hover .mosaic-window-title,
@@ -498,7 +498,7 @@ $drop-target-size-active: 25%;
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window .mosaic-window-body,
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-preview .mosaic-window-body {
-    background: #293742;
+    background: #542dbe;
 }
 
 .mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window .mosaic-window-additional-actions-bar .bp3-button,

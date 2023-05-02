@@ -9,6 +9,8 @@ import { mainStore } from "../../../stores/MainStore";
 import { Dashboard } from "../../../models/Dashboard";
 import { NavbarTooltip } from "./NavbarTooltip";
 
+import { BsFillLockFill, BsFillUnlockFill } from "react-icons/bs";
+
 export interface LockButtonProps {
     dashboard: Dashboard;
     isStoreOpen: boolean;
@@ -24,14 +26,16 @@ const _LockButton: React.FC<LockButtonProps> = ({ dashboard, isLocked, isStoreOp
     };
 
     const buttonProps = {
-        icon: isLocked ? "lock" : "unlock",
+        // icon: isLocked ? "lock" : "unlock",
         onClick: isLocked ? dashboard.unlock : dashboard.lock,
         disabled: isStoreOpen
     } as const;
 
     return (
         <NavbarTooltip {...tooltipProps}>
-            <AnchorButton minimal {...buttonProps} />
+            <AnchorButton minimal {...buttonProps}>
+               { isLocked ? <BsFillUnlockFill /> : <BsFillLockFill/> }
+            </AnchorButton>
         </NavbarTooltip>
     );
 };

@@ -44,6 +44,7 @@
         "react-dnd": "7.4.5",
         "react-dnd-html5-backend": "7.4.4",
         "react-dom": "^18.0.0",
+        "react-icons": "^4.8.0",
         "react-markdown": "4.1.0",
         "react-measure": "2.3.0",
         "react-router": "5.0.1",
@@ -121,8 +122,8 @@
     },
     "optionalDependencies": {
         "chromedriver": "^78.0.1",
-        "nightwatch": "^1.2.4",
         "geckodriver": "1.16.1",
+        "nightwatch": "^1.2.4",
         "selenium-server": "3.141.59"
     },
     "resolutions": {
