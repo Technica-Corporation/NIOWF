@@ -2,6 +2,7 @@
 
 $menuItemPadding: 12px;
 $navbarHeight: 2.5rem;
+$navbarBackgroundColor: #542dbe;
 $navbarHovorColor: #009dd3;
 $hoverIndicatorWidth: 4px;
 
@@ -9,6 +10,7 @@ $hoverIndicatorWidth: 4px;
   height: $navbarHeight;
   background-color: $background-color_dark;
   border-color: $background-color_dark;
+  background: $navbarBackgroundColor;
 
   display: flex;
   justify-content: space-between;
@@ -24,7 +26,7 @@ $hoverIndicatorWidth: 4px;
       &:hover, &:active, &.bp3-active {
         &:not(.bp3-disabled) {
           color: $navbarHovorColor;
-          background: $background-color_dark;
+          background: $navbarBackgroundColor;
 
           border-top: $hoverIndicatorWidth solid $navbarHovorColor;
           border-bottom: $hoverIndicatorWidth solid transparent;
@@ -82,7 +84,7 @@ $hoverIndicatorWidth: 4px;
 }
 
 :local(.userMenu).bp3-menu {
-  background: $background-color_dark;
+  background: $navbarBackgroundColor;
   padding-left: 0;
 }
 
@@ -91,7 +93,7 @@ $hoverIndicatorWidth: 4px;
 
   &:hover {
     color: $navbarHovorColor;
-    background: $background-color_dark;
+    background: $navbarBackgroundColor;
     border-left: $hoverIndicatorWidth solid $navbarHovorColor;
     padding-left: $menuItemPadding - $hoverIndicatorWidth;
     border-radius: 0;

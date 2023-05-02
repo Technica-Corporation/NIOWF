@@ -6,6 +6,7 @@ import { Shortcuts } from "../../../shared/hotkeys";
 
 import { mainStore } from "../../../stores/MainStore";
 import { NavbarTooltip } from "./NavbarTooltip";
+import { FiShoppingCart } from "react-icons/fi";
 
 const _StoreButton: React.FC = () => {
     const toggleStore = () => {
@@ -16,7 +17,9 @@ const _StoreButton: React.FC = () => {
 
     return (
         <NavbarTooltip title="Marketplace" shortcut={Shortcuts.showStore} description="Open Marketplace">
-            <Button minimal icon="shopping-cart" onClick={toggleStore} data-element-id="store-button" />
+            <Button minimal onClick={toggleStore} data-element-id="store-button">
+                <FiShoppingCart />
+            </Button>
         </NavbarTooltip>
     );
 };

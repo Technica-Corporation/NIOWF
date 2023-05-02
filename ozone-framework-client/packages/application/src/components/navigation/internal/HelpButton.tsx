@@ -6,6 +6,7 @@ import { Shortcuts } from "../../../shared/hotkeys";
 import { mainStore } from "../../../stores/MainStore";
 
 import { NavbarTooltip } from "./NavbarTooltip";
+import { BsFillQuestionCircleFill } from "react-icons/bs";
 
 const _HelpButton: React.FC = () => {
     const isVisible = useBehavior(mainStore.isHelpDialogVisible);
@@ -16,11 +17,12 @@ const _HelpButton: React.FC = () => {
         <NavbarTooltip title="Help" shortcut={Shortcuts.showHelp} description="Show the Help window.">
             <Button
                 minimal
-                icon="help"
                 active={isVisible}
                 onClick={mainStore.showHelpDialog}
                 data-element-id="help-button"
-            />
+            >
+                <BsFillQuestionCircleFill/>
+            </Button>
         </NavbarTooltip>
     );
 };
