@@ -1,3 +1,4 @@
+import React from "react";
 import { Gateway, getGateway, ListOf, Response } from "../interfaces";
 import { GroupDTO } from "../models/GroupDTO";
 import { UserDTO } from "../models/UserDTO";
