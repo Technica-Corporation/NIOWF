@@ -2,6 +2,7 @@ import React from "react";
 import { AnchorButton, Menu, MenuItem, Popover, Position } from "@blueprintjs/core";
 
 import { dashboardService } from "../../../services/DashboardService";
+import { MdAddCircle } from "react-icons/md";
 
 const _AddLayoutMenu: React.FC = () => (
     <Menu>
@@ -28,7 +29,9 @@ const _AddLayoutButton: React.FC<AddLayoutButtonProps> = ({ isLocked, isStoreOpe
 
     return (
         <Popover position={Position.BOTTOM_RIGHT} minimal={true} content={<AddLayoutMenu />}>
-            <AnchorButton minimal icon="add" data-element-id="add-layout" disabled={isStoreOpen} />
+            <AnchorButton minimal data-element-id="add-layout" disabled={isStoreOpen}>
+                <MdAddCircle/>
+            </AnchorButton>
         </Popover>
     );
 };
