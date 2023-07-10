@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.7-nodejs10
+FROM nikolaik/python-nodejs:python3.9-nodejs10
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
