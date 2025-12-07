@@ -3,7 +3,7 @@ certifi==2019.6.16
 chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
-Django==2.2.10
+Django==4.2.27
 django-cas-ng==3.6.0
 django-enum-choices==2.1.1
 django-extensions==2.2.1
@@ -32,7 +32,7 @@ setuptools==41.6.0
 simplejson==3.16.0
 six==1.12.0
 snowballstemmer==1.9.0
-sqlparse==0.3.0
+sqlparse==0.5.4
 uritemplate==3.0.0
 urllib3==1.25.3
 uuid==1.30
